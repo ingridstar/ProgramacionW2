@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Articulo</title>
+    <link rel="icon" href="/public/logo-jo.png" type="logo-jo">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <form action="/edit/<%= user.account_number %>" method="POST">
+        <section class="Registros">
+            <h1>Editar informacion del articulo </h1>
+            
+            <label for="name">Nombre del Articulo:</label>
+            <input type="text" id="name" name="name" value="<%= user.name %>" required>
+            <br>
+
+            <label for="account_number">Número de articulo:</label>
+            <input type="text" id="account_number" name="account_number" value="<%= user.account_number %>" required>
+            <br>
+
+            <label for="career">Articulo:</label>
+            <select id="career" name="career" required>
+                <option value="">Selecciona un articulo</option>
+                <option value="Anillos" <%= user.career === 'Anillos' ? 'selected' : '' %>>Anillos</option>
+                <option value="Aretes" <%= user.career === 'Aretes' ? 'selected' : '' %>>Aretes</option>
+                <option value="Collares" <%= user.career === 'Collares' ? 'selected' : '' %>>Collares</option>
+                <option value="Pulseras" <%= user.career === 'Pulseras' ? 'selected' : '' %>>Pulseras</option>
+                <option value="Earcuff" <%= user.career === 'Earcuff' ? 'selected' : '' %>>Earcuff</option>
+                <option value="Mix & Match" <%= user.career === 'Mix & Match' ? 'selected' : '' %>>Mix & Match</option>
+            </select>
+            <br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="<%= user.email %>" required>
+            <br>
+            
+            <button type="submit">Guardar Cambios</button>
+            <a href="/table"><button type="button">Cancelar</button></a>
+        </section>
+    </form>
+</body>
+</html>

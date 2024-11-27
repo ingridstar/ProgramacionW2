@@ -1,0 +1,171 @@
+/* GENERALES */
+body {
+    background-image: url(ginebrap.png);
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 50px; 
+    padding-top: 50px; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em; 
+    color: #000000; 
+    margin-top: 0; 
+    margin-bottom: 20px; 
+}
+
+a {
+    text-decoration: none;
+    color: #ff0095;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+button {
+    background-color: #ea84d7;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ea84d7;
+}
+
+/* Formatos de Entrada y Selección */
+input, select, button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ea84d7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* INDEX */
+.Registros {
+    background-color: #ffffff; 
+    padding: 30px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 400px; 
+    height: auto; 
+}
+
+
+/* TABLAS */
+/* Estilo para el título de la cabecera */
+.header-title {
+    background-color: #f0f0f0; 
+    padding: 10px 20px;
+    width: 80%; 
+    max-width: 800px; 
+    margin: 20px auto; 
+    border-radius: 5px;
+    text-align: center;
+}
+table th, td {
+    text-align: center;
+}
+
+table td {
+    text-align: center;
+}
+
+.container-center {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    min-height: 100vh;
+    padding-top: 50px; 
+}
+
+
+.return-button {
+    position: fixed;
+    top: 40px;
+    left: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 15px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.return-button:hover {
+    color: #ea84d7;
+}
+
+/* Editar y ELiminar */
+.edit {
+    color: #ea84d7; 
+}
+
+.edit:hover {
+    color: #ea84d7; 
+}
+
+.delete {
+    color: #170202; 
+}
+
+.delete:hover {
+    color: #2c202098; 
+}
+
+
+
+
+/* Estilo para el contenedor de la tabla (index) */
+.table-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #ea84d7;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Estilos para el cuadro Enviado-Editado */
+.Enviado-Editado {
+    background-color: #d3d3d3; 
+    padding: 30px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 400px; 
+    text-align: center;
+}

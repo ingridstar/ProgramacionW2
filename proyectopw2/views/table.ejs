@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de piezas</title>
+    <link rel="icon" href="/public/logo-jo.png" type="logo-jo">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <a href="/" class="return-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M3.612 15.443c-.396.4-.992.11-.908-.453l.83-4.73L.173 6.765c-.329-.32-.158-.888.283-.95l4.898-.696L7.538.792c.197-.396.73-.396.927 0l2.184 4.327 4.898.696c.441.062.612.63.283.95l-3.362 3.495.83 4.73c.084.563-.512.853-.908.453L8 13.187l-4.389 2.256z"/>
+        </svg>
+        
+        </svg>
+        
+        
+    </a>
+      
+    <h1 class="header-title">Lista de Piezas</h1>
+
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Nombre del articulo</th>
+                <th>Numero de piezas</th>
+                <th>Coleccion</th>
+                <th>Email</th>
+                <th>Acciones</th>
+            </tr>
+            <% users.forEach(user => { %>
+            <tr>
+                <td><%= user.account_number %></td>
+                <td><%= user.name %></td>
+                <td><%= user.career %></td>
+                <td><%= user.email %></td>
+                <td>
+                    <a href= "/edit/<%= user.account_number %>" class="edit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M13.498.795a1.745 1.745 0 0 1 2.463 0l.242.242a1.745 1.745 0 0 1 0 2.463l-1.15 1.15L12.348 1.94l1.15-1.15zm-2.89 2.488l-8.008 8.008-.853 3.415a.5.5 0 0 0 .606.606l3.415-.853 8.008-8.008-3.168-3.168z"/>
+                            <path fill-rule="evenodd" d="M1 13.5a.5.5 0 0 1 .5-.5h2.293L13.854 3.439l-.707-.707L3.086 12.293V15H1.5a.5.5 0 0 1-.5-.5v-1z"/>
+                        </svg>
+                        
+                        
+                    </a>   
+                    <a href="/delete/<%= user.account_number %>" class="delete">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                        
+                    </a>
+                        
+                </td>
+            </tr>
+            <% }); %>
+        </table>
+    </div>
+</body>
+</html>
